@@ -1,0 +1,126 @@
+.otp-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f8fc;
+    padding: 20px;
+}
+
+.otp-box {
+    width: 100%;
+    max-width: 450px;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.10);
+}
+
+.back-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.back-button svg {
+    width: 18px;
+    height: 18px;
+}
+
+.otp-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eef7ff;
+    margin: 0 auto 20px;
+}
+
+.otp-icon svg {
+    width: 38px;
+    height: 38px;
+}
+
+.otp-box h2 {
+    text-align: center;
+    margin: 0;
+    font-size: 28px;
+}
+
+.otp-box > p {
+    text-align: center;
+    color: #777;
+    line-height: 1.6;
+    margin: 12px 0 30px;
+}
+
+.otp-box strong {
+    color: #222;
+}
+
+.otp-box label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.otp-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 10px;
+    outline: none;
+}
+
+.otp-input:focus {
+    border-color: #2563eb;
+}
+
+.otp-error {
+    color: #dc2626 !important;
+    text-align: left !important;
+    margin: 10px 0 !important;
+    font-size: 14px;
+}
+
+.verify-button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.verify-button:hover {
+    background: #1d4ed8;
+}
+
+.verify-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.verify-button svg {
+    width: 18px;
+}

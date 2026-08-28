@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+}
+
+
+
+.login-left {
+    width: 50%;
+    background: linear-gradient(135deg, #075985, #0284c7);
+    color: white;
+    padding: 45px 70px;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-left::after {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    right: -180px;
+    top: 150px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo-box {
+    width: 42px;
+    height: 42px;
+    background-color: white;
+    color: #0284c7;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.left-content {
+    margin-top: 180px;
+    position: relative;
+    z-index: 2;
+}
+
+.left-content h1 {
+    font-size: 52px;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.left-content h1 span {
+    color: #dbeafe;
+}
+
+.left-content p {
+    width: 500px;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #e0f2fe;
+}
+
+.features {
+    margin-top: 35px;
+}
+
+.features div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 18px 0;
+}
+
+.features svg {
+    width: 22px;
+    color: #bae6fd;
+}
+
+
+
+.login-right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.login-box {
+    width: 430px;
+}
+
+.login-box h2 {
+    font-size: 36px;
+    color: #172033;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #6b7280;
+    margin-bottom: 35px;
+}
+
+.login-box label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 8px;
+}
+
+.input-box {
+    height: 52px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    margin-bottom: 22px;
+}
+
+.input-box svg {
+    width: 19px;
+    color: #6b7280;
+}
+
+.input-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    margin-left: 12px;
+    font-size: 14px;
+}
+
+.password-label {
+    display: flex;
+    justify-content: space-between;
+}
+
+.password-label span {
+    font-size: 13px;
+    color: #0369a1;
+    cursor: pointer;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 5px 0 25px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.login-button {
+    width: 100%;
+    height: 52px;
+    border: none;
+    border-radius: 8px;
+    background-color: #0284c7;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.login-button:hover {
+    background-color: #0369a1;
+}
+
+.login-button svg {
+    width: 18px;
+}
+
+.or {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 25px 0;
+    color: #9ca3af;
+    font-size: 13px;
+}
+
+.or::before,
+.or::after {
+    content: "";
+    height: 1px;
+    background-color: #e5e7eb;
+    flex: 1;
+}
+
+.google-button {
+    width: 100%;
+    height: 48px;
+    background-color: white;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.google-button b {
+    color: #4285f4;
+    font-size: 18px;
+}
+
+.register {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.register span {
+    color: #0284c7;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.security {
+    text-align: center;
+    color: #9ca3af;
+    font-size: 12px;
+    margin-top: 25px;
+}
+
+
+
+
+@media (max-width: 900px) {
+
+    .login-left {
+        display: none;
+    }
+
+    .login-right {
+        width: 100%;
+    }
+
+    .login-box {
+        width: 90%;
+        max-width: 430px;
+    }
+}

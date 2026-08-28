@@ -1,0 +1,413 @@
+* {
+  box-sizing: border-box;
+}
+
+.gallery-page {
+  min-height: 100vh;
+  padding: 50px 70px;
+  background: #f4f8fb;
+  font-family: Arial, sans-serif;
+}
+
+
+.gallery-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.gallery-header h1 {
+  font-size: 38px;
+  margin-bottom: 10px;
+  color: #12304a;
+}
+
+.gallery-header p {
+  font-size: 17px;
+  color: #6b7c8c;
+}
+
+/* Gallery */
+
+.gallery-grid {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+
+.gallery-card {
+  height: 240px;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.14);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+@media (max-width: 900px) {
+  .gallery-page {
+    padding: 40px 30px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 600px) {
+  .gallery-page {
+    padding: 30px 20px;
+  }
+
+  .gallery-header h1 {
+    font-size: 30px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-card {
+    height: 220px;
+  }
+}
+.gallery-page {
+    min-height: 100vh;
+    padding: 70px 7%;
+    background: #f7fafc;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.gallery-header {
+    max-width: 720px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+
+.gallery-tag {
+    display: inline-block;
+    margin-bottom: 15px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #159a8c;
+}
+
+
+.gallery-header h1 {
+    margin: 0;
+    font-size: 52px;
+    font-weight: 800;
+    color: #12263a;
+}
+
+
+.gallery-header p {
+    margin-top: 18px;
+    line-height: 1.7;
+    font-size: 16px;
+    color: #6b7c8f;
+}
+
+
+/* =========================
+   GALLERY GRID
+========================= */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    max-width: 1250px;
+    margin: auto;
+}
+
+
+.gallery-card {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+    border-radius: 18px;
+    cursor: pointer;
+    background: #e9eef2;
+}
+
+
+.gallery-card:nth-child(1) {
+    grid-column: span 2;
+    height: 380px;
+}
+
+
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+
+.gallery-card:hover img {
+    transform: scale(1.08);
+}
+
+
+/* =========================
+   OVERLAY
+========================= */
+
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 22px;
+    opacity: 0;
+    transition: 0.3s ease;
+
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, 0.75)
+    );
+}
+
+
+.gallery-card:hover .gallery-overlay {
+    opacity: 1;
+}
+
+
+.gallery-overlay span {
+    color: white;
+    font-weight: 600;
+}
+
+
+.gallery-number {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    background: rgba(5, 15, 25, 0.94);
+}
+
+
+.lightbox-content {
+    max-width: 1000px;
+    width: 85%;
+}
+
+
+.lightbox-content img {
+    width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    display: block;
+    border-radius: 12px;
+}
+
+
+.lightbox-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 15px;
+
+    color: white;
+}
+
+
+.lightbox-info span {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+
+.lightbox-info strong {
+    font-size: 14px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+
+    border: none;
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+
+.lightbox-close {
+    top: 25px;
+    right: 30px;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+}
+
+
+.lightbox-prev,
+.lightbox-next {
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    font-size: 40px;
+}
+
+
+.lightbox-prev {
+    left: 30px;
+}
+
+
+.lightbox-next {
+    right: 30px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .gallery-page {
+        padding: 50px 5%;
+    }
+
+
+    .gallery-header h1 {
+        font-size: 42px;
+    }
+
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .gallery-card:nth-child(1) {
+        grid-column: span 2;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .gallery-page {
+        padding: 40px 20px;
+    }
+
+
+    .gallery-header {
+        margin-bottom: 35px;
+    }
+
+
+    .gallery-header h1 {
+        font-size: 34px;
+    }
+
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+
+    .gallery-card,
+    .gallery-card:nth-child(1) {
+        grid-column: span 1;
+        height: 250px;
+    }
+
+
+    .lightbox {
+        padding: 15px;
+    }
+
+
+    .lightbox-content {
+        width: 95%;
+    }
+
+
+    .lightbox-prev {
+        left: 10px;
+    }
+
+
+    .lightbox-next {
+        right: 10px;
+    }
+
+}
