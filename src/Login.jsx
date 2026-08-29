@@ -1,3 +1,4 @@
+```javascript
 import { useState } from "react";
 
 import {
@@ -26,8 +27,6 @@ function Login({
     const [loading, setLoading] = useState(false);
 
 
-
-
     async function handleLogin() {
 
         setEmailError("");
@@ -36,6 +35,9 @@ function Login({
         let isValid = true;
 
 
+        // =========================
+        // EMAIL VALIDATION
+        // =========================
 
         if (email.trim() === "") {
 
@@ -55,7 +57,9 @@ function Login({
         }
 
 
-      
+        // =========================
+        // PASSWORD VALIDATION
+        // =========================
 
         if (password.trim() === "") {
 
@@ -75,8 +79,6 @@ function Login({
         }
 
 
-     
-
         if (!isValid) {
             return;
         }
@@ -87,42 +89,35 @@ function Login({
             setLoading(true);
 
 
-         
+            // =========================
+            // LOGIN API
+            // =========================
 
-            const response =
-                await fetch(
-                axios.post(
-  "https://smartdoctor1-6.onrender.com/api/users/login",
-  data
-),
-                    {
-                        method: "POST",
+            const response = await fetch(
+                "https://smartdoctor1-6.onrender.com/api/users/login",
+                {
+                    method: "POST",
 
-                        headers: {
-                            "Content-Type":
-                                "application/json"
-                        },
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
 
-                        body: JSON.stringify({
-
-                            email:
-                                email.trim(),
-
-                            password:
-                                password
-
-                        })
-                    }
-                );
+                    body: JSON.stringify({
+                        email: email.trim(),
+                        password: password
+                    })
+                }
+            );
 
 
-           
+            // =========================
+            // ERROR RESPONSE
+            // =========================
 
             if (!response.ok) {
 
                 const message =
                     await response.text();
-
 
                 setPasswordError(
                     message ||
@@ -133,7 +128,9 @@ function Login({
             }
 
 
-           
+            // =========================
+            // SUCCESS RESPONSE
+            // =========================
 
             const user =
                 await response.json();
@@ -145,7 +142,9 @@ function Login({
             );
 
 
-          
+            // =========================
+            // SAVE USER
+            // =========================
 
             localStorage.setItem(
                 "user",
@@ -153,7 +152,9 @@ function Login({
             );
 
 
-          
+            // =========================
+            // ROLE BASED LOGIN
+            // =========================
 
             if (user.role === "DOCTOR") {
 
@@ -175,7 +176,6 @@ function Login({
                 "Login error:",
                 error
             );
-
 
             setPasswordError(
                 "Unable to connect to server ❌"
@@ -312,6 +312,7 @@ function Login({
                             type="text"
                             placeholder="Enter your email"
                             value={email}
+
                             onChange={(e) => {
 
                                 setEmail(
@@ -346,8 +347,6 @@ function Login({
                         </label>
 
 
-                        {/* ⭐ FORGOT PASSWORD */}
-
                         <span
                             onClick={() => {
 
@@ -356,6 +355,7 @@ function Login({
                                 }
 
                             }}
+
                             style={{
                                 cursor: "pointer"
                             }}
@@ -374,6 +374,7 @@ function Login({
                             type="password"
                             placeholder="Enter your password"
                             value={password}
+
                             onChange={(e) => {
 
                                 setPassword(
@@ -451,9 +452,6 @@ function Login({
                     </div>
 
 
-                 
-
-
                     {/* =========================
                         REGISTER
                     ========================= */}
@@ -495,3 +493,4 @@ function Login({
 
 
 export default Login;
+```
