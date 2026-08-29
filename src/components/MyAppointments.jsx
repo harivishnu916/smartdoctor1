@@ -17,7 +17,7 @@ function MyAppointments() {
         try {
 
             const response = await fetch(
-               "https://smartdoctor1-production.up.railway.app/api/appointments"
+              "http://localhost:8080/api/appointments"
             );
 
             if (!response.ok) {
@@ -56,7 +56,7 @@ function MyAppointments() {
         try {
 
             const response = await fetch(
-               `https://smartdoctor1-production.up.railway.app/api/appointments/cancel/${id}`,
+              `http://localhost:8080/api/appointments/cancel/${id}`,
                 {
                     method: "PUT"
                 }

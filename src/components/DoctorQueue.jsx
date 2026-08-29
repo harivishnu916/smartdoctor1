@@ -30,7 +30,7 @@ function DoctorQueue() {
 
             const response =
                 await fetch(
-                  "https://smartdoctor1-production.up.railway.app/api/appointments",
+                 "http://localhost:8080/api/appointments",
                 );
 
 
@@ -183,7 +183,7 @@ function DoctorQueue() {
 
             const queueResponse =
                 await fetch(
-                   "https://smartdoctor1-production.up.railway.app/api/queue",
+             "http://localhost:8080/api/queue",
                 );
 
 
@@ -237,7 +237,7 @@ function DoctorQueue() {
 
                 const createResponse =
                     await fetch(
-                       "https://smartdoctor1-production.up.railway.app/api/queue",
+                      "http://localhost:8080/api/queue",
                         {
                             method: "POST",
 
@@ -288,7 +288,7 @@ function DoctorQueue() {
 
             const refreshResponse =
                 await fetch(
-                   "https://smartdoctor1-production.up.railway.app/api/queue/refresh/${existingQueue.id}",
+                  "http://localhost:8080/api/queue/refresh/${existingQueue.id}",
                     {
                         method: "PUT"
                     }
@@ -375,7 +375,7 @@ function DoctorQueue() {
 
             const response =
                 await fetch(
-                   "https://smartdoctor1-production.up.railway.app/api/queue/next/${queue.id}",
+              "http://localhost:8080/api/queue/next/${queue.id}",
                     {
                         method: "PUT"
                     }

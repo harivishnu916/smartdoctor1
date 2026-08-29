@@ -136,7 +136,7 @@ function Signup({ onSignup, onLogin }) {
 
             const response =
                 await fetch(
-                  "https://smartdoctor1-production.up.railway.app/api/users/signup",
+            "http://localhost:8080/api/users/signup",
                     {
                         method: "POST",
 

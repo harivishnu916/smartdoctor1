@@ -69,7 +69,7 @@ function MyQueue() {
             // =========================
 
             const response = await fetch(
-               "https://smartdoctor1-production.up.railway.app/api/appointments"
+              "http://localhost:8080/api/appointments"
             );
 
 
@@ -219,7 +219,7 @@ function MyQueue() {
 
             const queueResponse =
                 await fetch(
-                    `https://smartdoctor1-production.up.railway.app/api/queue/status` +
+                    `http://localhost:8080/api/queue/status` +
                     `?doctorName=${encodeURIComponent(
                         doctorName
                     )}` +
@@ -296,7 +296,7 @@ function MyQueue() {
             new Client({
 
                 brokerURL:
-                  "wss://smartdoctor1-production.up.railway.app/ws",
+                 "ws://localhost:8080/ws",
 
                 reconnectDelay:
                     5000,

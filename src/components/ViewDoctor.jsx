@@ -8,7 +8,7 @@ function ViewDoctor({ doctorId, onBack, onBook }) {
 
     useEffect(() => {
 
-       fetch(`https://smartdoctor1-production.up.railway.app/api/doctors/${doctorId}`)
+  fetch(`http://localhost:8080/api/doctors/${doctorId}`)
 
             .then((response) => {
 

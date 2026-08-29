@@ -11,7 +11,7 @@ function FindDoctor({ onViewDoctor }) {
   
     useEffect(() => {
 
-      fetch("https://smartdoctor1-production.up.railway.app/api/doctors")
+  fetch("http://localhost:8080/api/doctors")
 
             .then((response) => {
 

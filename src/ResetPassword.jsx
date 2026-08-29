@@ -88,7 +88,7 @@ function ResetPassword({
             // =========================
 
             const response = await fetch(
-              "https://smartdoctor1-production.up.railway.app/api/users/reset-password",
+            "http://localhost:8080/api/users/reset-password",
                 {
                     method: "POST",
 
