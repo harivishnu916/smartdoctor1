@@ -89,7 +89,7 @@
 }
 
 
-/* Labels */
+
 
 .signup-box label {
     display: block;
@@ -103,7 +103,7 @@
 }
 
 
-/* Input */
+
 
 .signup-input {
     height: 45px;
@@ -153,7 +153,7 @@
 }
 
 
-/* Error */
+
 
 .signup-error {
     color: #dc2626;
@@ -166,7 +166,7 @@
 }
 
 
-/* Success */
+
 
 .signup-success {
     color: #15803d;
@@ -179,7 +179,7 @@
 }
 
 
-/* Button */
+
 
 .signup-button {
     width: 100%;
@@ -219,7 +219,7 @@
 }
 
 
-/* Login Link */
+
 
 .login-link {
     text-align: center;
@@ -242,7 +242,7 @@
 }
 
 
-/* Security */
+
 
 .security {
     text-align: center;
@@ -255,7 +255,7 @@
 }
 
 
-/* Mobile */
+
 
 @media (max-width: 500px) {
 

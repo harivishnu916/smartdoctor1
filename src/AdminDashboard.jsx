@@ -103,7 +103,7 @@ function AdminDashboard() {
             </div>
 
 
-            {/* Recent Appointments */}
+         
 
             <div className="admin-section">
 

@@ -27,9 +27,7 @@ import "./App.css";
 
 function App() {
 
-    // =========================
-    // CHECK SAVED USER
-    // =========================
+
 
     const savedUser =
         JSON.parse(
@@ -37,17 +35,13 @@ function App() {
         );
 
 
-    // =========================
-    // LOGIN STATE
-    // =========================
+  
 
     const [isLoggedIn, setIsLoggedIn] =
         useState(!!savedUser);
 
 
-    // =========================
-    // CURRENT PAGE
-    // =========================
+   
 
     const [page, setPage] =
         useState(() => {
@@ -86,17 +80,12 @@ function App() {
         });
 
 
-    // =========================
-    // RESET PASSWORD EMAIL
-    // =========================
 
     const [resetEmail, setResetEmail] =
         useState("");
 
 
-    // =========================
-    // SELECTED DOCTOR
-    // =========================
+ 
 
     const [
         selectedDoctorId,
@@ -104,9 +93,7 @@ function App() {
     ] = useState(null);
 
 
-    // =========================
-    // NAVIGATION
-    // =========================
+  
 
     function navigateTo(newPage) {
 
@@ -120,9 +107,6 @@ function App() {
     }
 
 
-    // =========================
-    // LOGIN SUCCESS
-    // =========================
 
     function handleLogin(role) {
 
@@ -133,9 +117,7 @@ function App() {
     }
 
 
-    // =========================
-    // LOGOUT
-    // =========================
+   
 
     function handleLogout() {
 
@@ -154,9 +136,6 @@ function App() {
     }
 
 
-    // =========================
-    // VIEW DOCTOR
-    // =========================
 
     function handleViewDoctor(
         doctorId
@@ -173,9 +152,7 @@ function App() {
     }
 
 
-    // =========================
-    // BACK TO FIND DOCTOR
-    // =========================
+
 
     function handleBackToDoctors() {
 
@@ -186,16 +163,11 @@ function App() {
     }
 
 
-    // =========================
-    // RENDER PAGE
-    // =========================
+   
 
     function renderPage() {
 
 
-        // =========================
-        // HOME
-        // =========================
 
         if (
             page === "Home"
@@ -248,9 +220,6 @@ function App() {
         }
 
 
-        // =========================
-        // GALLERY
-        // =========================
 
         if (
             page === "Gallery"
@@ -261,9 +230,7 @@ function App() {
         }
 
 
-        // =========================
-        // DASHBOARD
-        // =========================
+   
 
         if (
             page === "Dashboard"
@@ -274,9 +241,6 @@ function App() {
         }
 
 
-        // =========================
-        // FIND DOCTOR
-        // =========================
 
         if (
             page === "Find Doctor"
@@ -297,9 +261,7 @@ function App() {
         }
 
 
-        // =========================
-        // VIEW DOCTOR
-        // =========================
+    
 
         if (
             page === "View Doctor"
@@ -324,9 +286,7 @@ function App() {
         }
 
 
-        // =========================
-        // BOOK APPOINTMENT
-        // =========================
+   
 
         if (
             page === "Book Appointment"
@@ -339,9 +299,7 @@ function App() {
         }
 
 
-        // =========================
-        // MY APPOINTMENTS
-        // =========================
+   
 
         if (
             page === "My Appointments"
@@ -354,9 +312,7 @@ function App() {
         }
 
 
-        // =========================
-        // MY QUEUE
-        // =========================
+      
 
         if (
             page === "My Queue"
@@ -367,9 +323,6 @@ function App() {
         }
 
 
-        // =========================
-        // HISTORY
-        // =========================
 
         if (
             page === "History"
@@ -380,9 +333,6 @@ function App() {
         }
 
 
-        // =========================
-        // PROFILE
-        // =========================
 
         if (
             page === "Profile"
@@ -393,9 +343,6 @@ function App() {
         }
 
 
-        // =========================
-        // DOCTOR QUEUE
-        // =========================
 
         if (
             page === "Doctor Queue"
@@ -434,18 +381,14 @@ function App() {
         }
 
 
-        // =========================
-        // DEFAULT
-        // =========================
+       
 
         return <Dashboard />;
 
     }
 
 
-    // =========================
-    // LOGIN PAGE
-    // =========================
+  
 
     if (
         !isLoggedIn &&
@@ -479,9 +422,7 @@ function App() {
     }
 
 
-    // =========================
-    // FORGOT PASSWORD
-    // =========================
+
 
     if (
         !isLoggedIn &&
@@ -515,9 +456,7 @@ function App() {
     }
 
 
-    // =========================
-    // OTP VERIFICATION
-    // =========================
+   
 
     if (
         !isLoggedIn &&
@@ -553,9 +492,7 @@ function App() {
     }
 
 
-    // =========================
-    // RESET PASSWORD
-    // =========================
+  
 
     if (
         !isLoggedIn &&
@@ -591,9 +528,8 @@ function App() {
     }
 
 
-    // =========================
-    // SIGNUP
-    // =========================
+
+
 
     if (
         !isLoggedIn &&
@@ -623,9 +559,7 @@ function App() {
     }
 
 
-    // =========================
-    // PUBLIC HOME / GALLERY
-    // =========================
+
 
     if (
         !isLoggedIn &&
@@ -640,9 +574,6 @@ function App() {
     }
 
 
-    // =========================
-    // LOGGED-IN APP
-    // =========================
 
     return (
 

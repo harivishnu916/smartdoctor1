@@ -26,9 +26,7 @@ function Login({
     const [loading, setLoading] = useState(false);
 
 
-    // =========================
-    // LOGIN
-    // =========================
+
 
     async function handleLogin() {
 
@@ -38,9 +36,6 @@ function Login({
         let isValid = true;
 
 
-        // =========================
-        // EMAIL VALIDATION
-        // =========================
 
         if (email.trim() === "") {
 
@@ -60,9 +55,7 @@ function Login({
         }
 
 
-        // =========================
-        // PASSWORD VALIDATION
-        // =========================
+      
 
         if (password.trim() === "") {
 
@@ -82,9 +75,7 @@ function Login({
         }
 
 
-        // =========================
-        // STOP VALIDATION
-        // =========================
+     
 
         if (!isValid) {
             return;
@@ -96,9 +87,7 @@ function Login({
             setLoading(true);
 
 
-            // =========================
-            // BACKEND LOGIN API
-            // =========================
+         
 
             const response =
                 await fetch(
@@ -124,9 +113,7 @@ function Login({
                 );
 
 
-            // =========================
-            // LOGIN ERROR
-            // =========================
+           
 
             if (!response.ok) {
 
@@ -143,9 +130,7 @@ function Login({
             }
 
 
-            // =========================
-            // GET USER
-            // =========================
+           
 
             const user =
                 await response.json();
@@ -157,9 +142,7 @@ function Login({
             );
 
 
-            // =========================
-            // SAVE USER
-            // =========================
+          
 
             localStorage.setItem(
                 "user",
@@ -167,9 +150,7 @@ function Login({
             );
 
 
-            // =========================
-            // ROLE BASED LOGIN
-            // =========================
+          
 
             if (user.role === "DOCTOR") {
 
@@ -467,22 +448,7 @@ function Login({
                     </div>
 
 
-                    {/* =========================
-                        GOOGLE
-                    ========================= */}
-
-                    <button
-                        className="google-button"
-                        type="button"
-                    >
-
-                        <b>
-                            G
-                        </b>
-
-                        Continue with Google
-
-                    </button>
+                 
 
 
                     {/* =========================

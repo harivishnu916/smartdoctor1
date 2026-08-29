@@ -252,7 +252,7 @@ function Signup({ onSignup, onLogin }) {
                     </div>
 
                     <span>
-                        CareQueue
+                        PULSE POINT
                     </span>
 
                 </div>

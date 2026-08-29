@@ -17,7 +17,7 @@ button {
   display: flex;
 }
 
-/* SIDEBAR */
+
 
 .sidebar {
   width: 240px;
@@ -86,7 +86,7 @@ button {
   transform: translateX(5px);
 }
 
-/* MAIN */
+
 
 .main {
   margin-left: 240px;
@@ -137,7 +137,7 @@ button {
   color: #7782a3;
 }
 
-/* CONTENT */
+
 
 .content {
   padding: 30px;
@@ -156,7 +156,7 @@ button {
   }
 }
 
-/* WELCOME */
+
 
 .welcome {
   background: linear-gradient(135deg, #171d3b, #20204b);
@@ -200,7 +200,7 @@ button {
   }
 }
 
-/* CARDS */
+
 
 .cards {
   display: grid;
@@ -334,7 +334,7 @@ button {
   background: #1b2240;
 }
 
-/* PAGE TITLE */
+
 
 .page-title {
   margin-bottom: 25px;
@@ -349,7 +349,7 @@ button {
   color: #7f8aaa;
 }
 
-/* SEARCH */
+
 
 .search {
   width: 350px;
@@ -374,7 +374,7 @@ button {
   font-size: 12px;
 }
 
-/* DOCTORS */
+
 
 .doctor-grid {
   display: grid;
@@ -413,7 +413,7 @@ button {
   margin: 15px 0;
 }
 
-/* FORM */
+
 
 .form-box {
   max-width: 750px;
@@ -486,7 +486,7 @@ button {
   }
 }
 
-/* APPOINTMENTS */
+
 
 .appointment-list,
 .history {
@@ -544,7 +544,7 @@ button {
   font-size: 11px;
 }
 
-/* QUEUE */
+
 
 .queue {
   max-width: 600px;
@@ -648,7 +648,7 @@ button {
   font-size: 11px;
 }
 
-/* PROFILE */
+
 
 .profile {
   max-width: 850px;
@@ -717,7 +717,7 @@ button {
   color: #ffffff;
 }
 
-/* RESPONSIVE */
+
 
 @media (max-width: 1000px) {
 
