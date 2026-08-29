@@ -7,8 +7,7 @@ function ViewDoctor({ doctorId, onBack, onBook }) {
     const [error, setError] = useState("");
 
     useEffect(() => {
-
-  fetch(`http://localhost:8080/api/doctors/${doctorId}`)
+    fetch(`https://smartdoctor1-6.onrender.com/api/doctors/${doctorId}`)
 
             .then((response) => {
 

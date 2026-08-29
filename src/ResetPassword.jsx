@@ -88,7 +88,10 @@ function ResetPassword({
             // =========================
 
             const response = await fetch(
-            "http://localhost:8080/api/users/reset-password",
+          axios.post(
+  "https://smartdoctor1-6.onrender.com/api/users/reset-password",
+  data
+),
                 {
                     method: "POST",
 

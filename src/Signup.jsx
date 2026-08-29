@@ -136,7 +136,10 @@ function Signup({ onSignup, onLogin }) {
 
             const response =
                 await fetch(
-            "http://localhost:8080/api/users/signup",
+          axios.post(
+  "https://smartdoctor1-6.onrender.com/api/users/signup",
+  data
+),
                     {
                         method: "POST",
 

@@ -51,7 +51,7 @@ function Dashboard() {
 
             const appointmentResponse =
                 await fetch(
-                "http://localhost:8080/api/appointments",
+             axios.get("https://smartdoctor1-6.onrender.com/api/appointments")
                 );
 
 
@@ -70,7 +70,7 @@ function Dashboard() {
 
             const queueResponse =
                 await fetch(
-                 "http://localhost:8080/api/queue"
+              axios.get("https://smartdoctor1-6.onrender.com/api/queue")
                 );
 
 
