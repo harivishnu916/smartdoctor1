@@ -102,20 +102,18 @@ function BookAppointment() {
 
         try {
 
-            const response = await fetch(
-            axios.get(
-  "https://smartdoctor1-6.onrender.com/api/appointments"
-),
-                  {
-                    method: "POST",
+          const response = await fetch(
+    "https://smartdoctor1-6.onrender.com/api/appointments",
+    {
+        method: "POST",
 
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
+        headers: {
+            "Content-Type": "application/json"
+        },
 
-                    body: JSON.stringify(appointment)
-                }
-            );
+        body: JSON.stringify(appointment)
+    }
+);
 
 
             // =========================

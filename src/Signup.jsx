@@ -134,24 +134,18 @@ function Signup({ onSignup, onLogin }) {
             // BACKEND SIGNUP
             // =========================
 
-            const response =
-                await fetch(
-          axios.post(
-  "https://smartdoctor1-6.onrender.com/api/users/signup",
-  data
-),
-                    {
-                        method: "POST",
+         const response = await fetch(
+    "https://smartdoctor1-6.onrender.com/api/users/signup",
+    {
+        method: "POST",
 
-                        headers: {
-                            "Content-Type":
-                                "application/json"
-                        },
+        headers: {
+            "Content-Type": "application/json"
+        },
 
-                        body:
-                            JSON.stringify(user)
-                    }
-                );
+        body: JSON.stringify(user)
+    }
+);
 
 
             // =========================

@@ -46,51 +46,50 @@ function Dashboard() {
 
 
             // =========================
-            // APPOINTMENTS
-            // =========================
+         const appointmentResponse = await fetch(
+    "https://smartdoctor1-6.onrender.com/api/appointments",
+    {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    }
+);
 
-            const appointmentResponse =
-                await fetch(
-             axios.get("https://smartdoctor1-6.onrender.com/api/appointments")
-                );
+if (appointmentResponse.ok) {
 
+    const data = await appointmentResponse.json();
 
-            if (appointmentResponse.ok) {
-
-                const data =
-                    await appointmentResponse.json();
-
-                setAppointments(data);
-            }
+    setAppointments(data);
+}
 
 
             // =========================
             // QUEUES
             // =========================
 
-            const queueResponse =
-                await fetch(
-              axios.get("https://smartdoctor1-6.onrender.com/api/queue")
-                );
+            const queueResponse = await fetch(
+    "https://smartdoctor1-6.onrender.com/api/queue",
+    {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    }
+);
 
+if (queueResponse.ok) {
 
-            if (queueResponse.ok) {
+    const queues = await queueResponse.json();
 
-                const queues =
-                    await queueResponse.json();
+    const activeQueue = queues.find(
+        item => item.status === "ACTIVE"
+    );
 
+    setQueue(activeQueue || null);
+}
 
-                const activeQueue =
-                    queues.find(
-                        item =>
-                            item.status === "ACTIVE"
-                    );
-
-
-                setQueue(
-                    activeQueue || null
-                );
-            }
+       
 
 
         } catch (error) {

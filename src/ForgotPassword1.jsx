@@ -46,20 +46,20 @@ function ForgotPassword1({ onBackToLogin, onOtpSent }) {
 
             setLoading(true);
 
-            const response = await fetch(
-              axios.post("https://smartdoctor1-6.onrender.com/api/users/forgot-password", data),
-                {
-                    method: "POST",
+      const response = await fetch(
+    "https://smartdoctor1-6.onrender.com/api/users/forgot-password",
+    {
+        method: "POST",
 
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
+        headers: {
+            "Content-Type": "application/json"
+        },
 
-                    body: JSON.stringify({
-                        email: email.trim()
-                    })
-                }
-            );
+        body: JSON.stringify({
+            email: email.trim()
+        })
+    }
+);
 
 
             const message =
