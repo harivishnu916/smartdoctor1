@@ -47,7 +47,7 @@ function ForgotPassword1({ onBackToLogin, onOtpSent }) {
             setLoading(true);
 
             const response = await fetch(
-                "http://localhost:8080/api/users/forgot-password",
+                "https://smartdoctor1-production.up.railway.app/api/users/forgot-password"
                 {
                     method: "POST",
 

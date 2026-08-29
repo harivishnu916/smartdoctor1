@@ -43,7 +43,7 @@ function OTPVerification({
 
 
             const response = await fetch(
-                "http://localhost:8080/api/users/verify-otp",
+                "https://smartdoctor1-production.up.railway.app/api/users/forgot-password"
                 {
                     method: "POST",
 

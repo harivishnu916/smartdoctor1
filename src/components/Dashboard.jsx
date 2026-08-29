@@ -51,7 +51,7 @@ function Dashboard() {
 
             const appointmentResponse =
                 await fetch(
-                    "http://localhost:8080/api/appointments"
+                   "https://smartdoctor1-production.up.railway.app/api/appointments",
                 );
 
 
@@ -70,7 +70,7 @@ function Dashboard() {
 
             const queueResponse =
                 await fetch(
-                    "http://localhost:8080/api/queue"
+                  "https://smartdoctor1-production.up.railway.app/api/queue"
                 );
 
 

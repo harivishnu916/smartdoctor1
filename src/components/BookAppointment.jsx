@@ -103,8 +103,8 @@ function BookAppointment() {
         try {
 
             const response = await fetch(
-                "http://localhost:8080/api/appointments",
-                {
+               "https://smartdoctor1-production.up.railway.app/api/appointments",
+                  {
                     method: "POST",
 
                     headers: {
