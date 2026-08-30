@@ -1,11 +1,10 @@
-package com.example.demo;
+﻿package com.example.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
-@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/api/doctors")
 public class AppointmentController {
