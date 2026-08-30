@@ -22,7 +22,7 @@ function DoctorQueue() {
             setLoading(true);
 
             const response = await fetch(
-             "  https://smartdoctor1-6.onrender.com/api/appointments",
+             "  https://smartdoctor1-8.onrender.com/api/appointments",
             );
 
             if (!response.ok) {
@@ -130,7 +130,7 @@ function DoctorQueue() {
             // =========================
 
             const queueResponse = await fetch(
-             "https://smartdoctor1-6.onrender.com/api/queue"
+             "https://smartdoctor1-8.onrender.com/api/queue"
             );
 
             if (!queueResponse.ok) {
@@ -174,7 +174,7 @@ function DoctorQueue() {
 
                 const createResponse =
                     await fetch(
-                      "https://smartdoctor1-6.onrender.com/api/queue",
+                      "https://smartdoctor1-8.onrender.com/api/queue",
                         {
                             method: "POST",
 
@@ -222,7 +222,7 @@ function DoctorQueue() {
 
             const refreshResponse =
                 await fetch(
-                    `https://smartdoctor1-6.onrender.com/api/queue/refresh/${existingQueue.id}`,
+                    `https://smartdoctor1-8.onrender.com/api/queue/refresh/${existingQueue.id}`,
                     {
                         method: "PUT"
                     }
@@ -292,7 +292,7 @@ function DoctorQueue() {
 
             const response =
                 await fetch(
-                 `https://smartdoctor1-6.onrender.com/api/queue/next/${queue.id}`,
+                 `https://smartdoctor1-8.onrender.com/api/queue/next/${queue.id}`,
                     {
                         method: "PUT"
                     }
@@ -317,7 +317,7 @@ function DoctorQueue() {
 
             const appointmentResponse =
                 await fetch(
-                 "https://smartdoctor1-6.onrender.com/api/appointments"
+                 "https://smartdoctor1-8.onrender.com/api/appointments"
                 );
 
 

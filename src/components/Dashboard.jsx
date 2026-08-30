@@ -47,7 +47,7 @@ function Dashboard() {
 
             // =========================
          const appointmentResponse = await fetch(
-    "https://smartdoctor1-6.onrender.com/api/appointments",
+    "https://smartdoctor1-8.onrender.com/api/appointments",
     {
         method: "GET",
         headers: {
@@ -69,7 +69,7 @@ if (appointmentResponse.ok) {
             // =========================
 
             const queueResponse = await fetch(
-    "https://smartdoctor1-6.onrender.com/api/queue",
+    "https://smartdoctor1-8.onrender.com/api/queue",
     {
         method: "GET",
         headers: {

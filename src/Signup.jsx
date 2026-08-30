@@ -135,7 +135,7 @@ function Signup({ onSignup, onLogin }) {
             // =========================
 
          const response = await fetch(
-    "https://smartdoctor1-6.onrender.com/api/users/signup",
+    "https://smartdoctor1-8.onrender.com/api/users/signup",
     {
         method: "POST",
 

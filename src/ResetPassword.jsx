@@ -88,7 +88,7 @@ function ResetPassword({
             // =========================
 
       const response = await fetch(
-    "https://smartdoctor1-6.onrender.com/api/users/reset-password",
+    "https://smartdoctor1-8.onrender.com/api/users/reset-password",
     {
         method: "POST",
 

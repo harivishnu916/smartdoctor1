@@ -43,7 +43,7 @@ function OTPVerification({
 
 
         const response = await fetch(
-    "https://smartdoctor1-6.onrender.com/api/users/forgot-password",
+    "https://smartdoctor1-8.onrender.com/api/users/forgot-password",
     {
         method: "POST",
 

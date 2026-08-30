@@ -103,7 +103,7 @@ function BookAppointment() {
         try {
 
           const response = await fetch(
-    "https://smartdoctor1-6.onrender.com/api/appointments",
+    "https://smartdoctor1-8.onrender.com/api/appointments",
     {
         method: "POST",
 

@@ -69,7 +69,7 @@ function MyQueue() {
             // =========================
 
             const response = await fetch(
-            "https://smartdoctor1-6.onrender.com/api/appointments"
+            "https://smartdoctor1-8.onrender.com/api/appointments"
             );
 
 
@@ -219,7 +219,7 @@ function MyQueue() {
 
             const queueResponse =
                 await fetch(
-                    `https://smartdoctor1-6.onrender.com/api/queue/status` +
+                    `https://smartdoctor1-8.onrender.com/api/queue/status` +
                     `?doctorName=${encodeURIComponent(
                         doctorName
                     )}` +
@@ -296,7 +296,7 @@ function MyQueue() {
             new Client({
 
                 brokerURL:
-              "wss://smartdoctor1-6.onrender.com/ws",
+              "wss://smartdoctor1-8.onrender.com/ws",
 
                 reconnectDelay:
                     5000,

@@ -8,7 +8,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/appointments")
-@CrossOrigin(origins = "http://localhost:5173")
+
 public class BookAppointmentController {
 
     @Autowired
